@@ -1,8 +1,8 @@
 // Export a functional React component named Header
 export const Header = () => {
   return (
-    // A div to contain the navigation bar, positioned relatively with some spacing above and centered items
-    <div className="relative top-3 flex items-center justify-center">
+    // A div to contain the navigation bar, fixed with some spacing above and centered items
+    <div className="fixed top-3 flex w-full items-center justify-center">
       {/* Navigation bar container */}
       <nav className="flex gap-1 rounded-full border border-white/15 bg-white/10 p-0.5 backdrop-blur">
         {/* Navigation link: Home */}
