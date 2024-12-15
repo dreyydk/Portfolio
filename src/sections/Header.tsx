@@ -1,28 +1,28 @@
-// Header component that renders a navigation bar
+// Export a functional React component named Header
 export const Header = () => {
   return (
+    // A div to contain the navigation bar, positioned relatively with some spacing above and centered items
     <div className="relative top-3 flex items-center justify-center">
-      {/* Container for the header, centered with some top margin */}
+      {/* Navigation bar container */}
       <nav className="flex gap-1 rounded-full border border-white/15 bg-white/10 p-0.5 backdrop-blur">
-        {/* Navigation bar with rounded edges and a blurred background */}
-        {/* Navigation links */}
+        {/* Navigation link: Home */}
         <a href="#" className="nav-item">
-          {/* Link to Home */}
-          Home
+          Início
         </a>
+        {/* Navigation link: Projects */}
         <a href="#" className="nav-item">
-          {/* Link to Projects */}
-          Projects
+          Projetos
         </a>
+        {/* Navigation link: About */}
         <a href="#" className="nav-item">
-          {/* Link to About */}
-          About
+          Sobre
         </a>
+        {/* Navigation link: Contact, styled with a distinct background and text color */}
         <a
-          href="#" // Link to Contact
-          className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900" // Active link with hover effects
+          href="#"
+          className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900"
         >
-          Contact
+          Contato
         </a>
       </nav>
     </div>
