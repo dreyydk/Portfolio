@@ -40,3 +40,17 @@ export const portfolioProjects = [
     image: project03,
   },
 ];
+
+export const tapeWords = [
+  "Performáticos",
+  "Acessíveis",
+  "Seguros",
+  "Interativos",
+  "Escaláveis",
+  "User Friendly",
+  "Responsivos",
+  "Sustentáveis",
+  "Otimizados",
+  "Utilizáveis",
+  "Confiáveis",
+];
