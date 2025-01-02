@@ -2,9 +2,9 @@
 import Image from "next/image"; // Next.js component for optimized image rendering
 import { portfolioProjects } from "@/constants"; // Importing portfolio projects data
 import { SectionHeader } from "@/components/SectionHeader"; // Reusable component for section headers
+import { Card } from "@/components/Card"; // Reusable Card component for project display
 import CheckCircleIcon from "@/assets/icons/check-circle.svg"; // Icon for displaying a checked circle
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"; // Icon for arrow indicating link
-import grainImage from "@/assets/images/grain.jpg"; // Background grain image
 
 // Define the ProjectsSection component
 export const ProjectsSection = () => {
@@ -17,21 +17,16 @@ export const ProjectsSection = () => {
         <SectionHeader
           eyebrow="Resultados Reais" // Subtitle displayed above the title
           title="Projetos Pessoais" // Main title of the section
-          description='Conheça a "ponta do iceberg" da minha capacidade com alguns dos meus trabalhos pessoais mais recentes.' // Description for context
+          description='Conheça a "ponta do iceberg" da minha capacidade com alguns dos meus trabalhos pessoais mais recentes.' // Description providing context
         />
         {/* Section displaying portfolio projects */}
         <div className="mt-10 flex flex-col gap-20 md:mt-20">
           {portfolioProjects.map((project) => (
-            // Card for each project with styling and layout
-            <div
+            // Using the reusable Card component for consistent styling
+            <Card
               key={project.title} // Unique key for each project
-              className="relative z-0 overflow-hidden rounded-3xl bg-gray-800 px-8 pt-8 after:pointer-events-none after:absolute after:inset-0 after:z-10 after:rounded-3xl after:outline after:outline-2 after:-outline-offset-2 after:outline-white/20 after:content-[''] md:px-10 md:pt-12 lg:px-20 lg:pt-16"
+              className="px-8 pb-0 pt-8 md:px-10 md:pt-12 lg:px-20 lg:pt-16" // Custom padding for card layout
             >
-              {/* Background grain image */}
-              <div
-                className="absolute inset-0 -z-10 opacity-5"
-                style={{ backgroundImage: `url(${grainImage.src})` }}
-              ></div>
               {/* Grid layout for project details and image */}
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 {/* Project description section */}
@@ -78,7 +73,7 @@ export const ProjectsSection = () => {
                   />
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
