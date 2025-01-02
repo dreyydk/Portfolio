@@ -25,7 +25,7 @@ export const portfolioProjects = [
     results: [
       { title: "Desenvolvimento de identidade visual" }, // Visual identity development
       { title: "Foco em conversão e engajamento" }, // Focus on conversion and engagement
-      { title: "Totalmente pensado na experiência de usuário" }, // User experience-focused design
+      { title: "Pensado na experiência de usuário" }, // User experience-focused design
     ],
     link: "https://sirius-ai-two.vercel.app",
     image: project02,

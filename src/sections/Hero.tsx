@@ -78,8 +78,8 @@ export const HeroSection = () => {
             Construindo Soluções Expecionais {/* Section heading */}
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Sou especialista em transformar suas ideias em projetos de software
-            de alto padrão.
+            Me chamo Andrey, e sou especialista em transformar suas ideias em
+            projetos de software de alto padrão.
           </p>
         </div>
         {/* Call-to-action buttons */}
