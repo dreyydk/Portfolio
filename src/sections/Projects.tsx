@@ -1,6 +1,7 @@
 // Import necessary modules and components
 import Image from "next/image"; // Next.js component for optimized image rendering
 import { portfolioProjects } from "@/constants"; // Importing portfolio projects data
+import { SectionHeader } from "@/components/SectionHeader"; // Reusable component for section headers
 import CheckCircleIcon from "@/assets/icons/check-circle.svg"; // Icon for displaying a checked circle
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg"; // Icon for arrow indicating link
 import grainImage from "@/assets/images/grain.jpg"; // Background grain image
@@ -12,19 +13,12 @@ export const ProjectsSection = () => {
     <section className="pb-16 lg:py-24">
       {/* Container for centering and managing layout */}
       <div className="container">
-        {/* Header section with a gradient text and title */}
-        <div className="flex justify-center">
-          <p className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-center font-semibold uppercase tracking-widest text-transparent">
-            Resultados Reais
-          </p>
-        </div>
-        <h2 className="mt-6 text-center font-serif text-3xl md:text-5xl">
-          Projetos Pessoais
-        </h2>
-        <p className="mx-auto mt-4 max-w-md text-center text-white/60 md:text-lg lg:text-xl">
-          Conheça a "ponta do iceberg" da minha capacidade com alguns dos meus
-          trabalhos pessoais mais recentes.
-        </p>
+        {/* Reusable section header component */}
+        <SectionHeader
+          eyebrow="Resultados Reais" // Subtitle displayed above the title
+          title="Projetos Pessoais" // Main title of the section
+          description='Conheça a "ponta do iceberg" da minha capacidade com alguns dos meus trabalhos pessoais mais recentes.' // Description for context
+        />
         {/* Section displaying portfolio projects */}
         <div className="mt-10 flex flex-col gap-20 md:mt-20">
           {portfolioProjects.map((project) => (
@@ -42,7 +36,7 @@ export const ProjectsSection = () => {
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 {/* Project description section */}
                 <div className="lg:pb-16">
-                  {/* Project stack and year */}
+                  {/* Display project stack and year */}
                   <div className="inline-flex gap-2 bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-sm font-bold uppercase tracking-widest text-transparent">
                     <span>{project.stack}</span>
                     <span>&bull;</span>
